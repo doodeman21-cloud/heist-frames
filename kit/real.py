@@ -128,7 +128,7 @@ class Scene:
                 d.ellipse([p(cx - r), p(cy - r), p(cx + r), p(cy + r)], fill=255)
 
         hip, neck = j("hip"), j("neck")
-        hl, hr = (hip[0] - .085 * h, hip[1]), (hip[0] + .085 * h, hip[1])
+        hl, hr = (hip[0] - sx * .085 * h, hip[1]), (hip[0] + sx * .085 * h, hip[1])
         for k, f, hp in (("kL", "fL", hl), ("kR", "fR", hr)):
             cap_line(hp, j(k), .095, .072)
             cap_line(j(k), j(f), .07, .05)
