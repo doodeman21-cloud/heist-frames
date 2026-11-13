@@ -39,7 +39,13 @@ for i, (img, start, d) in enumerate(shots):
     n = max(1, round(d * FPS))
     zin = i % 2 == 0
     z = f"'min(1+0.10*on/{n},1.10)'" if zin else f"'max(1.10-0.10*on/{n},1.0)'"
-    src = os.path.join(proj, img)
+    src = os.path.join(proj, img.split("#")[0])
+    if "#close" in img:
+        from PIL import Image
+        fx, fy = (float(v) for v in (img.split(":")[1].split(",") if ":" in img else ("0.5", "0.5")))
+        im = Image.open(src); iw, ih = im.size; cw, ch = int(iw * 0.66), int(ih * 0.66)
+        x0 = min(max(int(fx * iw - cw / 2), 0), iw - cw); y0 = min(max(int(fy * ih - ch / 2), 0), ih - ch)
+        src = os.path.join(tmp, f"crop{i:03d}.jpg"); im.crop((x0, y0, x0 + cw, y0 + ch)).save(src, quality=93)
     vf = (f"scale=3840:2160,zoompan=z={z}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s={W}x{H}:fps={FPS},"
           f"format=yuv420p")
     if img == "black":
@@ -49,7 +55,7 @@ for i, (img, start, d) in enumerate(shots):
         cmd = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", src, "-frames:v", str(n)]
     clip = os.path.join(tmp, f"c{i:03d}.mp4")
     subprocess.run(cmd + ["-vf", vf, "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", clip], check=True)
-    lst.append(f"file '{clip}'")
+    lst.append(f"file '{os.path.abspath(clip)}'")
     print(f"shot {i + 1:02d} {img:10s} {start:7.2f}s  {d:5.2f}s", flush=True)
 open(os.path.join(tmp, "list.txt"), "w").write("\n".join(lst))
 
