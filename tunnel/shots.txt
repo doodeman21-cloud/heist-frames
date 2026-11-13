@@ -1,0 +1,37 @@
+# image | narration words where the shot starts
+frames/cut/s01a.jpg | On a Monday morning
+frames/cut/s02a.jpg | Around seventy
+frames/cut/s03a.jpg | No alarm
+frames/cut/s04a.jpg | The story starts
+frames/cut/s05a.jpg | A group of men
+frames/cut/s06a.jpg | They said they
+frames/cut/s07a.jpg | Neighbours watched
+frames/cut/s08a.jpg | It wasn't garden
+frames/cut/s09a.jpg | Inside the house
+frames/cut/s10a.jpg | Their tunnel
+frames/cut/s11a.jpg | The traffic above
+frames/cut/s12a.jpg | And this was no
+frames/cut/s13b.jpg | This crew had
+frames/cut/s13a.jpg | They also knew
+frames/cut/s14a.jpg | The vault held
+frames/cut/s15a.jpg | Old bills
+frames/cut/s16a.jpg | On the first weekend
+frames/cut/s17a.jpg | They cut up
+frames/cut/s18a.jpg | climbed into
+frames/cut/s19a.jpg | Then came the hard
+frames/cut/s20a.jpg | Bundle by bundle
+frames/cut/s21a.jpg | By the time
+frames/cut/s22a.jpg | Brazil had just
+frames/cut/s14b.jpg | And for a moment
+black | It wasn't
+frames/cut/s23a.jpg | The first cracks
+frames/cut/s24a.jpg | found about
+frames/cut/s25a.jpg | Other members
+frames/cut/s26a.jpg | But the police
+frames/cut/s27a.jpg | Two months after
+# placeholders until scenes 28 to 30 arrive
+black | He was found
+frames/cut/s25a.jpg | In the end
+frames/cut/s15a.jpg | But most of the money
+frames/cut/s10a.jpg | Three months of digging
+frames/cut/s12a.jpg | If you want more

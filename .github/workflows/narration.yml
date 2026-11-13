@@ -22,7 +22,7 @@ jobs:
           ls -la audio
       - name: Word timings
         run: |
-          pip install -q faster-whisper==1.0.3
+          pip install -q faster-whisper==1.0.3 requests
           python - <<'PY'
           import glob, json, os
           from faster_whisper import WhisperModel
