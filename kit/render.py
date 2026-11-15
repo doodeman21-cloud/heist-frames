@@ -67,7 +67,7 @@ RED, WHITE = r"{\c&H3C4CE8&}", r"{\c&HFFFFFF&}"
 ass = ["[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", f"PlayResY: {H}", "",
        "[V4+ Styles]",
        "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
-       "Style: Cap,Poppins,84,&H00FFFFFF,&H00FFFFFF,&H00101014,&H96000000,-1,0,0,0,100,100,1,0,1,5,0,5,60,60,0,1",
+       f"Style: Cap,Poppins,{int(os.environ.get('CAP_SIZE', '84'))},&H00FFFFFF,&H00FFFFFF,&H00101014,&H96000000,-1,0,0,0,100,100,1,0,1,5,0,5,60,60,0,1",
        "", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
 ws = [w for w in words if norm(w["w"])]
 for k in range(0, len(ws), 2):
@@ -78,7 +78,7 @@ for k in range(0, len(ws), 2):
         s = w["s"]
         e = pair[j + 1]["s"] if j + 1 < len(pair) else end_pair
         txt = " ".join((RED if m == j else WHITE) + p["w"].upper().strip(",.;:!?\"") for m, p in enumerate(pair))
-        ass.append(f"Dialogue: 0,{ts(s)},{ts(e)},Cap,,0,0,0,,{{\\pos({W // 2},{int(H * 0.60)})\\blur2}}{txt}")
+        ass.append(f"Dialogue: 0,{ts(s)},{ts(e)},Cap,,0,0,0,,{{\\pos({W // 2},{int(H * float(os.environ.get('CAP_Y', '0.60')))})\\blur2}}{txt}")
 sub = os.path.join(proj, "_captions.ass")
 open(sub, "w").write("\n".join(ass))
 

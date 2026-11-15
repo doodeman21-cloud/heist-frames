@@ -1,0 +1,28 @@
+cards/c01.jpg | One week ago
+cards/c02.jpg | He co-founded
+cards/c02.jpg#close:0.68,0.5 | the maker of
+cards/c03.jpg | Today
+cards/c04.jpg | So what actually
+cards/c05.jpg | It starts with
+cards/c06.jpg | For more than a year
+cards/c07.jpg | On October
+cards/c08.jpg | And according to
+cards/c09.jpg | She has not been
+cards/c10.jpg | Then, on Sunday
+cards/c11.jpg | The same day
+cards/c12.jpg | When markets opened
+cards/c13.jpg | On Wednesday
+cards/c14.jpg | And reports said
+cards/c15.jpg | On Thursday
+cards/c15.jpg#close:0.3,0.45 | NVIDIA announced
+cards/c16.jpg | The chief financial
+cards/c17.jpg | The stock fell as much
+cards/c18.jpg | And that afternoon
+cards/c19.jpg | The story didn't stop
+cards/c19.jpg#close:0.68,0.62 | and he has agreed
+cards/c20.jpg | The Attorney General
+cards/c21.jpg | And President Trump
+cards/c22.jpg | So what happens now
+cards/c23.jpg | And governments from
+cards/c24.jpg | The biggest question
+cards/c25.jpg | Subscribe

@@ -341,8 +341,8 @@ def c23():
 
 @card
 def c24():
-    c = Card(24, (36, 0, 0)); c.chip(960, 470, 220)
-    c.text(960, 780, "DID ANY SECRETS", 96, WHITE, anchor="ma"); c.text(960, 890, "LEAVE THE COMPANY?", 96, RED, anchor="ma"); c.save("c24")
+    c = Card(24, (36, 0, 0)); c.chip(960, 330, 170)
+    c.text(960, 580, "DID ANY SECRETS", 96, WHITE, anchor="ma"); c.text(960, 700, "LEAVE THE COMPANY?", 96, RED, anchor="ma"); c.save("c24")
 
 @card
 def c25():
