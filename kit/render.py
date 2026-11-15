@@ -5,7 +5,7 @@ A shot starts when its cue words are spoken; the first shot starts at 0."""
 import json, os, re, subprocess, sys
 
 proj, audio, words_f, out = sys.argv[1:5]
-W, H, FPS = 1920, 1080, 30
+W, H, FPS = int(os.environ.get('VW', 1920)), int(os.environ.get('VH', 1080)), 30
 words = json.load(open(words_f))
 norm = lambda s: re.sub(r"[^a-z0-9]", "", s.lower())
 nw = [norm(w["w"]) for w in words]
@@ -46,7 +46,7 @@ for i, (img, start, d) in enumerate(shots):
         im = Image.open(src); iw, ih = im.size; cw, ch = int(iw * 0.66), int(ih * 0.66)
         x0 = min(max(int(fx * iw - cw / 2), 0), iw - cw); y0 = min(max(int(fy * ih - ch / 2), 0), ih - ch)
         src = os.path.join(tmp, f"crop{i:03d}.jpg"); im.crop((x0, y0, x0 + cw, y0 + ch)).save(src, quality=93)
-    vf = (f"scale=3840:2160,zoompan=z={z}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s={W}x{H}:fps={FPS},"
+    vf = (f"scale={W*2}:{H*2},zoompan=z={z}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s={W}x{H}:fps={FPS},"
           f"format=yuv420p")
     if img == "black":
         cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", f"color=c=0x0b0b10:s={W}x{H}:r={FPS}", "-t", f"{n / FPS:.3f}"]
