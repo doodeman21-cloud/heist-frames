@@ -34,7 +34,7 @@ N(8, lambda c: (c.text(960, 300, "WORLD RECORD #1", 60, Y, anchor="mm"), c.rect(
 N(9, lambda c: (c.text(960, 230, "iShowSpeed", 90, anchor="mm"), bar(c, 360, 520, 1200, .82, PINK, "main story", "82%", 80))).save("g09")
 N(10, big("40 HOURS", "straight, no sleep", "iShowSpeed")).save("g10")
 N(11, big("392K", "watching live at the peak", "iShowSpeed", TEAL)).save("g11")
-N(12, big("\"12 MORE HOURS\"", "his own prediction", "iShowSpeed")).save("g12")
+N(12, big("~12 MORE HOURS?", "his own guess on stream", "iShowSpeed")).save("g12")
 N(13, big("100%", "every mission, every side activity", "Kai Cenat", (190, 170, 230))).save("g13")
 N(14, lambda c: board(c, ROWS)).save("g14")
 N(15, lambda c: (board(c, ROWS), c.rect(1380, 40, 1880, 170, fill=PINK, r=20), c.text(1630, 105, "AS OF NOV 20", 44, (255, 255, 255), anchor="mm"))).save("g15")
