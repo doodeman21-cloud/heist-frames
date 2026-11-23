@@ -1,0 +1,20 @@
+src = open("/home/claude/heist-frames/kit/gta_shorts_cards.py").read()
+exec(src.split("# hacker")[0])
+N(401, lambda c: (c.text(960, 260, "UPDATE", 60, TEAL, anchor="mm"), c.text(960, 430, "SENTENCED", 170, R, anchor="mm"), c.text(960, 600, "the hacker who leaked GTA 6", 56, anchor="mm"))).save("k01")
+N(402, big("7 YEARS", "for the Rockstar hack and other cyberattacks", "ARION KURTAJ, 21", R)).save("k02")
+N(403, lambda c: (c.rect(560, 330, 1360, 560, outline=G, w=8, r=20), c.text(960, 445, "FREED", 160, G, anchor="mm"), c.text(960, 690, "walked out of court the same day", 56, anchor="mm"))).save("k03")
+N(404, big("TIME SERVED", "secure hospital + custody counted", "THE JUDGE'S DECISION", TEAL)).save("k04")
+N(405, big("5-YEAR BAN", "no Telegram, no Discord", "ONLINE RESTRICTIONS", PINK)).save("k05")
+N(406, lambda c: (c.palms(), c.text(960, 380, "WAS THAT", 140, anchor="mm"), c.text(960, 540, "FAIR?", 170, R, anchor="mm"))).save("k06")
+N(501, lambda c: (c.palms(), c.text(960, 330, "MAKE THAT", 120, anchor="mm"), c.text(960, 500, "THREE", 190, PINK, anchor="mm"))).save("j01")
+N(502, big("67 HOURS", "to beat GTA 6 on stream", "KAI CENAT", (190, 170, 230))).save("j02")
+N(503, big("8.8 / 10", "his verdict", "KAI CENAT", Y)).save("j03")
+def pros(c):
+    c.text(960, 160, "KAI'S REVIEW", 56, TEAL, anchor="mm")
+    for i, (a, b, col) in enumerate((("Realism", "10/10", G), ("Map", "\"crazy\"", G), ("Humour", "less than GTA 5", R))):
+        y = 320 + i * 170; c.rect(360, y, 1560, y + 130, fill=(30, 14, 46), r=24); c.text(420, y + 65, a, 60, anchor="lm"); c.text(1500, y + 65, b, 60, col, anchor="rm")
+N(504, pros).save("j04")
+ROWS3 = [("1. BrycexD", 1.0, Y, "39:38"), ("2. iShowSpeed", 1.0, PINK, "52:30"), ("3. Kai Cenat", 1.0, (190, 170, 230), "67 HRS")]
+N(505, lambda c: board(c, ROWS3, "LEADERBOARD")).save("j05")
+N(506, lambda c: (c.palms(), c.text(960, 380, "IS 8.8", 150, anchor="mm"), c.text(960, 540, "TOO LOW?", 150, Y, anchor="mm"))).save("j06")
+print("ok")
