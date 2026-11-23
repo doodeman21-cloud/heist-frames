@@ -48,7 +48,12 @@ for i, (img, start, d) in enumerate(shots):
         src = os.path.join(tmp, f"crop{i:03d}.jpg"); im.crop((x0, y0, x0 + cw, y0 + ch)).save(src, quality=93)
     vf = (f"scale={W*2}:{H*2},zoompan=z={z}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s={W}x{H}:fps={FPS},"
           f"format=yuv420p")
-    if img == "black":
+    if src.endswith(".mp4"):
+        # an animated clip (e.g. from Flow): fill the frame, hold the last frame if the shot runs longer
+        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-frames:v", str(n)]
+        vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},"
+              f"tpad=stop_mode=clone:stop_duration=30,format=yuv420p")
+    elif img == "black":
         cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", f"color=c=0x0b0b10:s={W}x{H}:r={FPS}", "-t", f"{n / FPS:.3f}"]
         vf = "format=yuv420p"
     else:
