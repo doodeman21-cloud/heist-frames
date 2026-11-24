@@ -1,0 +1,15 @@
+src = open("/home/claude/heist-frames/kit/gta_shorts_cards.py").read()
+exec(src.split("# hacker")[0])
+N(601, lambda c: (c.palms(), c.text(960, 300, "100 HOURS IN", 120, anchor="mm"), c.text(960, 460, "ON DAY ONE", 150, Y, anchor="mm"), c.text(960, 610, "while everyone else was racing", 52, TEAL, anchor="mm"))).save("m01")
+N(602, big("\"MY FIRST 100 HOURS\"", "posted on his gaming channel, launch day", "MRBEAST", Y)).save("m02")
+def key(c):
+    c.glow(960, 470, 360, 260, (90, 70, 10), 140)
+    c.d.ellipse([p(700), p(300), p(960), p(560)], outline=Y, width=p(34)); c.rect(940, 410, 1380, 450, fill=Y, r=10)
+    for x in (1240, 1320): c.rect(x, 450, x + 34, 530, fill=Y, r=6)
+    c.text(960, 720, "EARLY ACCESS", 110, Y, anchor="mm"); c.text(960, 830, "from Rockstar", 52, anchor="mm")
+N(603, key).save("m03")
+N(604, big("DAILY VIDEOS", "\"they're gonna blow your mind\"", "HIS PROMISE", PINK)).save("m04")
+ROWS4 = [("BrycexD", .39, Y, "39 HRS awake"), ("iShowSpeed", .52, PINK, "52 HRS awake"), ("MrBeast", 1.0, (190, 170, 230), "100 HRS head start")]
+N(605, lambda c: board(c, ROWS4, "WHO HAD THE EDGE?")).save("m05")
+N(606, lambda c: (c.palms(), c.text(960, 380, "IS THAT", 150, anchor="mm"), c.text(960, 540, "FAIR?", 180, Y, anchor="mm"))).save("m06")
+print("ok")
