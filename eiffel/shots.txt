@@ -1,0 +1,12 @@
+v/e1.jpg | In 1925
+v/e1.jpg#close:0.3,0.45 | Then he sold
+v/e2.jpg | Victor Lustig
+v/e3.jpg | So he posed
+v/e3.jpg#close:0.5,0.4 | told them
+v/e4.jpg | One dealer
+v/e5.jpg | Lustig fled
+v/e6.jpg | Poisson was
+v/e3.jpg#close:0.5,0.55 | So Lustig came
+v/e7.jpg | This time
+v/e8.jpg | He ended up
+v/e1.jpg#close:0.4,0.6 | Would you have
